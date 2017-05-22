@@ -1,4 +1,11 @@
 #!/usr/bin/env python
+"""
+# this line was added to accept self-signed SSL VIM
+import requests
+requests.packages.urllib3.disable_warnings()
+"""
 from ezmomi import cli
+import requests
+requests.packages.urllib3.disable_warnings()
 if __name__ == '__main__':
     cli.cli()
